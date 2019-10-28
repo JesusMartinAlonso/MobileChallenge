@@ -10,4 +10,11 @@ import Foundation
 
 protocol ServiceLocator {
     
+    //Repository
+    var productRepository: ProductRepository {get}
+    var discountRepository: DiscountRepository {get}
+    
+    //Use cases
+    var getProductsUseCase: GetProductsUseCase {get}
+    
 }

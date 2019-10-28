@@ -8,6 +8,30 @@
 
 import Foundation
 
-struct ServiceLocatorDefault: ServiceLocator {
+class ServiceLocatorDefault: ServiceLocator {
+    
+    
+    lazy var networkHelper: NetworkHelper = {
+       NetworkHelper()
+    }()
+    
+    lazy var remoteDataSource: RemoteDataSource = {
+       URLRemoteDataSource()
+    }()
+    
+    lazy var productRepository: ProductRepository = {
+        ProductRepositoryImpl(remoteDataSource: remoteDataSource,
+                              networkHelper: networkHelper)
+    } ()
+    
+    lazy var discountRepository: DiscountRepository = {
+        DiscountRepositoryImpl()
+    } ()
+    
+    //Use cases
+    var getProductsUseCase: GetProductsUseCase {
+        GetProductsUseCase(productRepository: productRepository)
+    }
+    
     
 }
