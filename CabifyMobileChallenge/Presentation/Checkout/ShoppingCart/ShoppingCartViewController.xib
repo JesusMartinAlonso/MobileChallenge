@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Product Sans Bold.ttf">
+            <string>ProductSans-Bold</string>
+        </array>
+        <array key="Product Sans Regular.ttf">
+            <string>ProductSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="CabifyMobileChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="orderTableView" destination="Jdi-ED-Iem" id="0is-Rq-1kZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jdi-ED-Iem">
+                    <rect key="frame" x="0.0" y="64" width="414" height="672.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBt-JW-qnS">
+                    <rect key="frame" x="16" y="765.5" width="65.5" height="29.5"/>
+                    <fontDescription key="fontDescription" name="ProductSans-Bold" family="Product Sans" pointSize="24"/>
+                    <color key="textColor" name="BackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-5E-6SS">
+                    <rect key="frame" x="339" y="764.5" width="59" height="30.5"/>
+                    <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE3-5P-p81">
+                    <rect key="frame" x="0.0" y="811" width="414" height="43"/>
+                    <fontDescription key="fontDescription" name="ProductSans-Bold" family="Product Sans" pointSize="25"/>
+                    <state key="normal" title="Pay!">
+                        <color key="titleColor" name="BackgroundColor"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-JX-C8j">
+                    <rect key="frame" x="0.0" y="736.5" width="414" height="4"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="ZAP-ok-1ov"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yE3-5P-p81" secondAttribute="trailing" id="3MN-vS-eXb"/>
+                <constraint firstItem="Jdi-ED-Iem" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="8Ya-qC-bXH"/>
+                <constraint firstItem="yE3-5P-p81" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9CQ-tw-fRv"/>
+                <constraint firstItem="IBt-JW-qnS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LeS-2e-erc"/>
+                <constraint firstItem="VwT-JX-C8j" firstAttribute="top" secondItem="Jdi-ED-Iem" secondAttribute="bottom" id="LiB-H8-Znw"/>
+                <constraint firstItem="VwT-JX-C8j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NNk-IB-g8G"/>
+                <constraint firstItem="Jdi-ED-Iem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nz3-Nl-F0Z"/>
+                <constraint firstItem="VwT-JX-C8j" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="XjZ-16-bTB"/>
+                <constraint firstItem="Jdi-ED-Iem" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eOO-ev-KU1"/>
+                <constraint firstItem="yE3-5P-p81" firstAttribute="top" secondItem="7DN-5E-6SS" secondAttribute="bottom" constant="16" id="fwD-3Z-wjS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yE3-5P-p81" secondAttribute="bottom" constant="8" id="gNz-3X-lH2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7DN-5E-6SS" secondAttribute="trailing" constant="16" id="hcM-RF-7pn"/>
+                <constraint firstItem="7DN-5E-6SS" firstAttribute="top" secondItem="VwT-JX-C8j" secondAttribute="bottom" constant="24" id="p7R-qx-DmT"/>
+                <constraint firstItem="yE3-5P-p81" firstAttribute="top" secondItem="IBt-JW-qnS" secondAttribute="bottom" constant="16" id="vnU-cC-zgb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.45092982053756714" green="0.31508937478065491" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

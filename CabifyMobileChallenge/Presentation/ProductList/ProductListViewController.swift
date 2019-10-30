@@ -28,6 +28,9 @@ class ProductListViewController: BaseViewController {
     @objc func refreshProducts() {
         presenter.setup()
     }
+    @IBAction func checkoutButtonPressed() {
+        presenter.checkout()
+    }
 }
 
 extension ProductListViewController: UITableViewDelegate {

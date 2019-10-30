@@ -27,12 +27,13 @@ class ProductListRouter {
     
     func navigateToShoppingCart(){
         
-//        let secondVC = SecondRouter.createSecondViewController(serviceLocator: serviceLocator)
-//        
-//        if let navigationController = viewController?.navigationController {
-//            navigationController.pushViewController(secondVC, animated: true)
-//        }else{
-//            print("Error: navigation controller of current view controller is nil")
+        let shoppingCart = ShoppingCartRouter.createShoppingCartViewController(serviceLocator: serviceLocator)
+        
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(shoppingCart, animated: true)
+        } else {
+             print("Error: navigation controller of current view controller is nil")
+        }
             
     }
         

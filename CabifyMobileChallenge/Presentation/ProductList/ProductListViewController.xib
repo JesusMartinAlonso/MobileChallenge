@@ -36,6 +36,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                     <state key="normal" title="Checkout (5 items)"/>
+                    <connections>
+                        <action selector="checkoutButtonPressed" destination="-1" eventType="touchUpInside" id="s4f-TB-zai"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-Ip-c9I">
                     <rect key="frame" x="16" y="435.5" width="382" height="25.5"/>
