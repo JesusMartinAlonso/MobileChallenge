@@ -28,30 +28,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jdi-ED-Iem">
-                    <rect key="frame" x="0.0" y="64" width="414" height="672.5"/>
+                    <rect key="frame" x="0.0" y="64" width="414" height="674.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBt-JW-qnS">
-                    <rect key="frame" x="16" y="765.5" width="65.5" height="29.5"/>
+                    <rect key="frame" x="16" y="768" width="64.5" height="28"/>
                     <fontDescription key="fontDescription" name="ProductSans-Bold" family="Product Sans" pointSize="24"/>
                     <color key="textColor" name="BackgroundColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-5E-6SS">
-                    <rect key="frame" x="339" y="764.5" width="59" height="30.5"/>
+                    <rect key="frame" x="342" y="766.5" width="56" height="29.5"/>
                     <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE3-5P-p81">
-                    <rect key="frame" x="0.0" y="811" width="414" height="43"/>
+                    <rect key="frame" x="0.0" y="812" width="414" height="42"/>
                     <fontDescription key="fontDescription" name="ProductSans-Bold" family="Product Sans" pointSize="25"/>
                     <state key="normal" title="Pay!">
                         <color key="titleColor" name="BackgroundColor"/>
                     </state>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-JX-C8j">
-                    <rect key="frame" x="0.0" y="736.5" width="414" height="4"/>
+                    <rect key="frame" x="0.0" y="738.5" width="414" height="4"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="4" id="ZAP-ok-1ov"/>
@@ -81,7 +81,7 @@
     </objects>
     <resources>
         <namedColor name="BackgroundColor">
-            <color red="0.45092982053756714" green="0.31508937478065491" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45100000500679016" green="0.31499999761581421" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

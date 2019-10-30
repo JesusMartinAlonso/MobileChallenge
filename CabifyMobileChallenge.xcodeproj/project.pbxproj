@@ -74,7 +74,7 @@
 		2D0FAD5D2367703400C42EB6 /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
 		2D0FAD632367760600C42EB6 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		2D0FAD642367760600C42EB6 /* ShoppingCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartTableViewCell.xib; sourceTree = "<group>"; };
-		2D64AD542364541F00523A63 /* CabifyMobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabifyMobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D64AD542364541F00523A63 /* Cabify Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cabify Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D64AD572364541F00523A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D64AD602364542200523A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D64AD632364542200523A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		2D64AD552364541F00523A63 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D64AD542364541F00523A63 /* CabifyMobileChallenge.app */,
+				2D64AD542364541F00523A63 /* Cabify Store.app */,
 				2D64AD6A2364542200523A63 /* CabifyMobileChallengeTests.xctest */,
 			);
 			name = Products;
@@ -405,7 +405,7 @@
 			);
 			name = CabifyMobileChallenge;
 			productName = CabifyMobileChallenge;
-			productReference = 2D64AD542364541F00523A63 /* CabifyMobileChallenge.app */;
+			productReference = 2D64AD542364541F00523A63 /* Cabify Store.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D64AD692364542200523A63 /* CabifyMobileChallengeTests */ = {
@@ -746,7 +746,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.jesusmartinalonso.cabifymobilechallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Cabify Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -765,7 +765,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.jesusmartinalonso.cabifymobilechallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Cabify Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
