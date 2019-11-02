@@ -47,13 +47,12 @@ extension ProductListViewController: UITableViewDataSource {
         
         let product = productsDatasource[indexPath.row]
         let cell = getProductCell()
-        //cell.setProduct(product, quantity: shoppingCart[product.code] ?? 0)
         cell.setItem(product)
-        cell.didTapAddButtonClosure = { product in
+        cell.didTapAddButtonClosure = { [unowned self] product in
             self.presenter.addUnitToCart(ofProduct: product)
         }
 
-        cell.didTapRemoveButtonClosure = { product in
+        cell.didTapRemoveButtonClosure = { [unowned self] product in
             self.presenter.substractUnitToCart(ofProduct: product)
         }
         
@@ -106,24 +105,6 @@ extension ProductListViewController : ProductListDelegate {
         self.productsDatasource = products
         productsTableView.reloadData()
     }
-    
-    
-//    func update(products: [Product]?, shoppingCart: [String:Int]?) {
-//        var needsUpdateTableView = false
-//        if let products = products {
-//            self.productsDatasource = products
-//            needsUpdateTableView = true
-//        }
-//        
-//        if let shoppingCart = shoppingCart {
-//             self.shoppingCart = shoppingCart
-//             needsUpdateTableView = true
-//        }
-//        
-//        if needsUpdateTableView {
-//            productsTableView.reloadData()
-//        }
-//    }
     
     func isLoading(_ loading: Bool) {
         showLoading(loading: loading)

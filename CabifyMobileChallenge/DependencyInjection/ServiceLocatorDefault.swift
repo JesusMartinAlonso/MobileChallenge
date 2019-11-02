@@ -41,5 +41,8 @@ class ServiceLocatorDefault: ServiceLocator {
         GetDiscountUseCase(discountRepository: discountRepository)
     }
     
+    var payOrderUseCase: PayOrderUseCase {
+        PayOrderUseCase()
+    }
     
 }

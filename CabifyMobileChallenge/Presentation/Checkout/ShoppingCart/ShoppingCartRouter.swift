@@ -26,6 +26,16 @@ class ShoppingCartRouter {
         return viewController
         
     }
-}
     
+    func navigateToPayment() {
+        let paymentViewController = PaymentRouter.createPaymentViewController(serviceLocator: serviceLocator)
+        
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(paymentViewController, animated: true)
+        } else {
+            print("Error: navigation controller of current view controller is nil")
+        }
+    }
+}
+
 

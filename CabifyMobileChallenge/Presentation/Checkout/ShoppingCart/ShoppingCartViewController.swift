@@ -30,7 +30,7 @@ extension ShoppingCartViewController : ShoppingCartDelegate {
     }
     
     func update(shoppingCart: [ShoppingCartItem], totalAmount: Double) {
-        totalAmountLabel.text = "\(totalAmount) $"
+        totalAmountLabel.text = CurrencyHelper.format(amount: totalAmount)
         shoppingCartDatasource = shoppingCart
         orderTableView.reloadData()
     }

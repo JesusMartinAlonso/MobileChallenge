@@ -55,7 +55,7 @@ class ShoppingCartPresenter  {
     }
     
     func payOrder() {
-        //TODO: Go to payment
+        router.navigateToPayment()
     }
     
     

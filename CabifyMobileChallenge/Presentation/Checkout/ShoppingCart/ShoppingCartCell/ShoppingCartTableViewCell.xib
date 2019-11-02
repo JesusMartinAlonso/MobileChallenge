@@ -133,7 +133,7 @@
                                     <constraint firstItem="mRT-vi-uLW" firstAttribute="top" secondItem="Btp-ss-plG" secondAttribute="top" constant="4" id="dTY-G3-7KC"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kz-gW-2NI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kz-gW-2NI" userLabel="Separator">
                                 <rect key="frame" x="0.0" y="177" width="430" height="1"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -157,7 +157,6 @@
             <connections>
                 <outlet property="discountAmountLabel" destination="Xhx-XR-O1g" id="j2u-nt-mnH"/>
                 <outlet property="discountDescriptionLabel" destination="mRT-vi-uLW" id="WtH-kM-gWD"/>
-                <outlet property="discountSeparatorView" destination="0kz-gW-2NI" id="1CW-pM-IW0"/>
                 <outlet property="discountView" destination="Btp-ss-plG" id="Bj5-OE-G3u"/>
                 <outlet property="productNameLabel" destination="3SP-sp-rcL" id="z07-Qv-aB3"/>
                 <outlet property="quantityLabel" destination="XCv-gM-T9Y" id="DRP-ZZ-2wk"/>

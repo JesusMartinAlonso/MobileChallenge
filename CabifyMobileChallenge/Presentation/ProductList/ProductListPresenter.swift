@@ -80,11 +80,8 @@ class ProductListPresenter  {
     }
     
     func addUnitToCart(ofProduct product: Product) {
-        
-        
       shoppingCart[product, default: 0] += 1
       updateView()
-
     }
     
     func substractUnitToCart(ofProduct product: Product) {

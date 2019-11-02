@@ -26,6 +26,12 @@
 		2D0FAD6C236C497A00C42EB6 /* GetDiscountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD6B236C497900C42EB6 /* GetDiscountUseCase.swift */; };
 		2D0FAD6E236C4B5700C42EB6 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD6D236C4B5700C42EB6 /* LocalDataSource.swift */; };
 		2D0FAD70236C4BDA00C42EB6 /* HardcodedLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD6F236C4BDA00C42EB6 /* HardcodedLocalDataSource.swift */; };
+		2D0FAD75236D97FE00C42EB6 /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD71236D97FE00C42EB6 /* PaymentPresenter.swift */; };
+		2D0FAD76236D97FE00C42EB6 /* PaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD72236D97FE00C42EB6 /* PaymentRouter.swift */; };
+		2D0FAD77236D97FE00C42EB6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD73236D97FE00C42EB6 /* PaymentViewController.swift */; };
+		2D0FAD78236D97FE00C42EB6 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0FAD74236D97FE00C42EB6 /* PaymentViewController.xib */; };
+		2D0FAD7A236D983800C42EB6 /* PayOrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD79236D983800C42EB6 /* PayOrderUseCase.swift */; };
+		2D0FAD7C236DAF0E00C42EB6 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD7B236DAF0E00C42EB6 /* CurrencyFormatter.swift */; };
 		2D64AD582364541F00523A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64AD572364541F00523A63 /* AppDelegate.swift */; };
 		2D64AD612364542200523A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D64AD602364542200523A63 /* Assets.xcassets */; };
 		2D64AD642364542200523A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D64AD622364542200523A63 /* LaunchScreen.storyboard */; };
@@ -84,6 +90,12 @@
 		2D0FAD6B236C497900C42EB6 /* GetDiscountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDiscountUseCase.swift; sourceTree = "<group>"; };
 		2D0FAD6D236C4B5700C42EB6 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		2D0FAD6F236C4BDA00C42EB6 /* HardcodedLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcodedLocalDataSource.swift; sourceTree = "<group>"; };
+		2D0FAD71236D97FE00C42EB6 /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
+		2D0FAD72236D97FE00C42EB6 /* PaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouter.swift; sourceTree = "<group>"; };
+		2D0FAD73236D97FE00C42EB6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		2D0FAD74236D97FE00C42EB6 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		2D0FAD79236D983800C42EB6 /* PayOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrderUseCase.swift; sourceTree = "<group>"; };
+		2D0FAD7B236DAF0E00C42EB6 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		2D64AD542364541F00523A63 /* Cabify Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cabify Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D64AD572364541F00523A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D64AD602364542200523A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2D0FAD582366074100C42EB6 /* NetworkHelper.swift */,
+				2D0FAD7B236DAF0E00C42EB6 /* CurrencyFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -298,6 +311,10 @@
 		2DDB71232364568D0089F219 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				2D0FAD71236D97FE00C42EB6 /* PaymentPresenter.swift */,
+				2D0FAD72236D97FE00C42EB6 /* PaymentRouter.swift */,
+				2D0FAD73236D97FE00C42EB6 /* PaymentViewController.swift */,
+				2D0FAD74236D97FE00C42EB6 /* PaymentViewController.xib */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -330,6 +347,7 @@
 			children = (
 				2D0FAD4D2365B91C00C42EB6 /* GetProductsUseCase.swift */,
 				2D0FAD6B236C497900C42EB6 /* GetDiscountUseCase.swift */,
+				2D0FAD79236D983800C42EB6 /* PayOrderUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -494,6 +512,7 @@
 				2DDB714023649CE60089F219 /* ProductListViewController.xib in Resources */,
 				2D0FAD612367703400C42EB6 /* ShoppingCartViewController.xib in Resources */,
 				2D64AD612364542200523A63 /* Assets.xcassets in Resources */,
+				2D0FAD78236D97FE00C42EB6 /* PaymentViewController.xib in Resources */,
 				2DDB71522364A7F00089F219 /* Product Sans Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,14 +604,17 @@
 				2DDB7128236456EC0089F219 /* Product.swift in Sources */,
 				2D0FAD532366004600C42EB6 /* BaseViewController.swift in Sources */,
 				2DDB712C236459CC0089F219 /* BulkDiscount.swift in Sources */,
+				2D0FAD7A236D983800C42EB6 /* PayOrderUseCase.swift in Sources */,
 				2D0FAD592366074100C42EB6 /* NetworkHelper.swift in Sources */,
 				2D0FAD602367703400C42EB6 /* ShoppingCartViewController.swift in Sources */,
 				2DDB713E23649CE60089F219 /* ProductListRouter.swift in Sources */,
 				2DDB713323645C120089F219 /* DiscountRepository.swift in Sources */,
+				2D0FAD76236D97FE00C42EB6 /* PaymentRouter.swift in Sources */,
 				2D0FAD5E2367703400C42EB6 /* ShoppingCartPresenter.swift in Sources */,
 				2D0FAD6C236C497A00C42EB6 /* GetDiscountUseCase.swift in Sources */,
 				2DDB713123645C040089F219 /* ProductRepository.swift in Sources */,
 				2D0FAD5F2367703400C42EB6 /* ShoppingCartRouter.swift in Sources */,
+				2D0FAD7C236DAF0E00C42EB6 /* CurrencyFormatter.swift in Sources */,
 				2D0FAD502365BACF00C42EB6 /* DiscountRepositoryImpl.swift in Sources */,
 				2D0FAD4E2365B91C00C42EB6 /* GetProductsUseCase.swift in Sources */,
 				2D0FAD6E236C4B5700C42EB6 /* LocalDataSource.swift in Sources */,
@@ -601,7 +623,9 @@
 				2DDB71442364A53E0089F219 /* ProductTableViewCell.swift in Sources */,
 				2D64AD582364541F00523A63 /* AppDelegate.swift in Sources */,
 				2DDB713823649C050089F219 /* ServiceLocatorDefault.swift in Sources */,
+				2D0FAD75236D97FE00C42EB6 /* PaymentPresenter.swift in Sources */,
 				2DDB712A2364594B0089F219 /* Discount.swift in Sources */,
+				2D0FAD77236D97FE00C42EB6 /* PaymentViewController.swift in Sources */,
 				2DDB713F23649CE60089F219 /* ProductListViewController.swift in Sources */,
 				2D0FAD6A236B592300C42EB6 /* ProductTableViewCellItem.swift in Sources */,
 				2D0FAD4C2365B5C800C42EB6 /* URLRemoteDataSource.swift in Sources */,

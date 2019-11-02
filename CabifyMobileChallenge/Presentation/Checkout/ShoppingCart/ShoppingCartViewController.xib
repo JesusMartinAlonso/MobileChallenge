@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="CabifyMobileChallenge" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="Cabify_Store" customModuleProvider="target">
             <connections>
                 <outlet property="orderTableView" destination="Jdi-ED-Iem" id="0is-Rq-1kZ"/>
                 <outlet property="totalAmountLabel" destination="7DN-5E-6SS" id="f5E-pB-gkf"/>

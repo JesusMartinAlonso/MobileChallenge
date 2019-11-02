@@ -10,11 +10,11 @@ import Foundation
 
 struct URLRemoteDataSource: RemoteDataSource {
     func getProducts(result: @escaping (Result<[Product], CustomError>) -> Void) {
-        
+        //TODO: Extract URL
         if let url = URL(string: "https://api.myjson.com/bins/4bwec") {
             
             URLSession.shared.dataTask(with: url) { (data, response, error) in
-                
+                //TODO: Manage error
                 do {
                     
                     let dictionaryFromJSON = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]

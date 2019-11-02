@@ -37,8 +37,7 @@ class ProductTableViewCell: UITableViewCell {
     func setItem(_ item: ProductTableViewCellItem) {
         product = item.product
         nameLabel.text = item.product.name
-        //TODO: Refactor currency
-        priceLabel.text = "\(item.product.price) $"
+        priceLabel.text = CurrencyHelper.format(amount: item.product.price)
         quantityLabel.text = "\(item.quantity)"
     }
     

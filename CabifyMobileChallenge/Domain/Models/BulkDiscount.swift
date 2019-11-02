@@ -21,7 +21,7 @@ struct BulkDiscount: Discount {
     var description: String {
         //TODO: Localize
         //TODO: Currency
-        NSLocalizedString("Bulk discount: \(discountPerUnit)$ discount buying \(minimumQuantity) or more", comment: "")
+        NSLocalizedString("Bulk discount: \(discountPerUnit)\(CurrencyHelper.currency) discount buying \(minimumQuantity) or more", comment: "")
     }
     
     
