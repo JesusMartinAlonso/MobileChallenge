@@ -19,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="CabifyMobileChallenge" customModuleProvider="target">
             <connections>
                 <outlet property="orderTableView" destination="Jdi-ED-Iem" id="0is-Rq-1kZ"/>
+                <outlet property="totalAmountLabel" destination="7DN-5E-6SS" id="f5E-pB-gkf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -49,6 +50,9 @@
                     <state key="normal" title="Pay!">
                         <color key="titleColor" name="BackgroundColor"/>
                     </state>
+                    <connections>
+                        <action selector="pay" destination="-1" eventType="touchUpInside" id="hbA-eL-EpC"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-JX-C8j">
                     <rect key="frame" x="0.0" y="738.5" width="414" height="4"/>

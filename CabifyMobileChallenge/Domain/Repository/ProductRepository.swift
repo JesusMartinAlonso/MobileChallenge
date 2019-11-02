@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ProductRepository {
-    
+
+    //TODO: Document
     func getProducts(result: @escaping (Result<[Product],CustomError>) -> Void)
 }

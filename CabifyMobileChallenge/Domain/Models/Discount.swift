@@ -9,5 +9,12 @@
 import Foundation
 
 protocol Discount {
-    func amountToDiscount(units: Int, pricePerUnit: Double) -> Double
+
+    /// Returns the amount to discount given the quantity and the unit price of the product
+    /// - Parameter quantity: Number of items to apply the discount
+    /// - Parameter unitPrice: Unit price of the product
+    func amountToDiscount(quantity: Int, unitPrice: Double) -> Double
+    
+    /// Description of the discount
+    var description: String {get}
 }

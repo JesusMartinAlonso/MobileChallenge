@@ -10,8 +10,10 @@ import Foundation
 
 struct DiscountRepositoryImpl: DiscountRepository {
     
-    func getDiscounts(completion: @escaping (Result<[String : [Discount]], Error>) -> Void) {
-        
+    let localDataSource: LocalDataSource
+    
+    func getDiscounts(forProducts: [String], result: @escaping (Result<[String:Discount],Error>) -> Void) {
+        localDataSource.getDiscounts(forProducts: forProducts, result: result)
     }
     
     

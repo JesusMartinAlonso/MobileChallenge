@@ -13,30 +13,19 @@ class ShoppingCartRouter {
     }
     
     
-    static func createShoppingCartViewController(serviceLocator : ServiceLocator) -> ShoppingCartViewController {
+    static func createShoppingCartViewController(withShoppingCart shoppingCart: [Product:Int],
+                                                 serviceLocator : ServiceLocator) -> ShoppingCartViewController {
         
         let viewController = ShoppingCartViewController()
         let router = ShoppingCartRouter(viewController: viewController, serviceLocator: serviceLocator)
-        let presenter = ShoppingCartPresenter(delegate: viewController, router : router)
+        let presenter = ShoppingCartPresenter(delegate: viewController,
+                                              router : router,
+                                              shoppingCart: shoppingCart,
+                                              getDiscountUseCase: serviceLocator.getDiscountUseCase)
         viewController.presenter = presenter
         return viewController
         
     }
-    
-    
-    /*
-    func navigateToVC(){
-        
-        let secondVC = SecondRouter.createSecondViewController(serviceLocator: serviceLocator)
-        
-        if let navigationController = viewController?.navigationController {
-            navigationController.pushViewController(secondVC, animated: true)
-        }else{
-            print("Error: navigation controller of current view controller is nil")
-            
-    }*/
-        
-        
 }
     
 

@@ -25,9 +25,10 @@ class ProductListRouter {
         
     }
     
-    func navigateToShoppingCart(){
+    func navigateToShoppingCart(_ shoppingCart: [Product: Int]){
         
-        let shoppingCart = ShoppingCartRouter.createShoppingCartViewController(serviceLocator: serviceLocator)
+        let shoppingCart = ShoppingCartRouter.createShoppingCartViewController(withShoppingCart: shoppingCart,
+                                                                               serviceLocator: serviceLocator)
         
         if let navigationController = viewController?.navigationController {
             navigationController.pushViewController(shoppingCart, animated: true)

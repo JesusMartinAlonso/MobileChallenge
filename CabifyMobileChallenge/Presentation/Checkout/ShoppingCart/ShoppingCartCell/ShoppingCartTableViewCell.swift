@@ -32,5 +32,21 @@ class ShoppingCartTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    //TODO: Refactor currency
+    func setItem(_ item: ShoppingCartItem) {
+        productNameLabel.text = item.productName
+        unitPriceLabel.text = "\(item.unitPrice) $"
+        quantityLabel.text = "\(item.quantity)"
+        totalPriceLabel.text = "\(item.totalPrice) $"
+        if let discount = item.discount {
+            discountSeparatorView.isHidden = false
+            discountView.isHidden = false
+            discountDescriptionLabel.text = discount.description
+            discountAmountLabel.text = "- \(discount.amount) $"
+        } else {
+            discountSeparatorView.isHidden = true
+            discountView.isHidden = true
+        }
+    }
     
 }

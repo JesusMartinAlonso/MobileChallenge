@@ -9,7 +9,7 @@
 import Foundation
 
 /// Class that represent a product of Cabify store
-struct Product: Decodable {
+struct Product: Decodable, Hashable {
     /// Code id
     let code: String
     /// Name of the product

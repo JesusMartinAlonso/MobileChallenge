@@ -9,7 +9,8 @@ class ProductListViewController: BaseViewController {
     @IBOutlet weak var checkoutButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
-    var productsDatasource: [Product] = []
+    
+    var productsDatasource: [ProductTableViewCellItem] = []
     var shoppingCart: [String:Int] = [:]
     
     override func viewDidLoad() {
@@ -46,13 +47,14 @@ extension ProductListViewController: UITableViewDataSource {
         
         let product = productsDatasource[indexPath.row]
         let cell = getProductCell()
-        cell.setProduct(product, quantity: shoppingCart[product.code] ?? 0)
-        cell.didTapAddButtonClosure = { productCode in
-            self.presenter.addUnitToCart(productCode: productCode)
+        //cell.setProduct(product, quantity: shoppingCart[product.code] ?? 0)
+        cell.setItem(product)
+        cell.didTapAddButtonClosure = { product in
+            self.presenter.addUnitToCart(ofProduct: product)
         }
 
-        cell.didTapRemoveButtonClosure = { productCode in
-            self.presenter.substractUnitToCart(productCode: productCode)
+        cell.didTapRemoveButtonClosure = { product in
+            self.presenter.substractUnitToCart(ofProduct: product)
         }
         
         return cell
@@ -73,6 +75,8 @@ extension ProductListViewController: UITableViewDataSource {
 }
 
 extension ProductListViewController : ProductListDelegate {
+    
+    
     
     func showError(_ error: CustomError) {
         productsTableView.isHidden = true
@@ -98,23 +102,28 @@ extension ProductListViewController : ProductListDelegate {
         checkoutButton.isEnabled = enabled
     }
     
-    
-    func update(products: [Product]?, shoppingCart: [String:Int]?) {
-        var needsUpdateTableView = false
-        if let products = products {
-            self.productsDatasource = products
-            needsUpdateTableView = true
-        }
-        
-        if let shoppingCart = shoppingCart {
-             self.shoppingCart = shoppingCart
-             needsUpdateTableView = true
-        }
-        
-        if needsUpdateTableView {
-            productsTableView.reloadData()
-        }
+    func update(products: [ProductTableViewCellItem]) {
+        self.productsDatasource = products
+        productsTableView.reloadData()
     }
+    
+    
+//    func update(products: [Product]?, shoppingCart: [String:Int]?) {
+//        var needsUpdateTableView = false
+//        if let products = products {
+//            self.productsDatasource = products
+//            needsUpdateTableView = true
+//        }
+//        
+//        if let shoppingCart = shoppingCart {
+//             self.shoppingCart = shoppingCart
+//             needsUpdateTableView = true
+//        }
+//        
+//        if needsUpdateTableView {
+//            productsTableView.reloadData()
+//        }
+//    }
     
     func isLoading(_ loading: Bool) {
         showLoading(loading: loading)

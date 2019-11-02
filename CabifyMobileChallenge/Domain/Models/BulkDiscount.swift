@@ -14,8 +14,14 @@ struct BulkDiscount: Discount {
     
     let discountPerUnit: Double
     
-    func amountToDiscount(units: Int, pricePerUnit: Double) -> Double {
-        return units >= minimumQuantity ? discountPerUnit * Double(units) : 0.0
+    func amountToDiscount(quantity: Int, unitPrice: Double) -> Double {
+        return quantity >= minimumQuantity ? discountPerUnit * Double(quantity) : 0.0
+    }
+    
+    var description: String {
+        //TODO: Localize
+        //TODO: Currency
+        NSLocalizedString("Bulk discount: \(discountPerUnit)$ discount buying \(minimumQuantity) or more", comment: "")
     }
     
     

@@ -19,18 +19,26 @@ class ServiceLocatorDefault: ServiceLocator {
        URLRemoteDataSource()
     }()
     
+    lazy var localDataSource: LocalDataSource = {
+       HardCodedLocalDataSource()
+    }()
+    
     lazy var productRepository: ProductRepository = {
         ProductRepositoryImpl(remoteDataSource: remoteDataSource,
                               networkHelper: networkHelper)
     } ()
     
     lazy var discountRepository: DiscountRepository = {
-        DiscountRepositoryImpl()
+        DiscountRepositoryImpl(localDataSource: localDataSource)
     } ()
     
     //Use cases
     var getProductsUseCase: GetProductsUseCase {
         GetProductsUseCase(productRepository: productRepository)
+    }
+    
+    var getDiscountUseCase: GetDiscountUseCase {
+        GetDiscountUseCase(discountRepository: discountRepository)
     }
     
     

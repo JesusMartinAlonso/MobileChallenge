@@ -10,7 +10,12 @@ import Foundation
 
 struct TwoForOneDiscount: Discount {
     
-    func amountToDiscount(units: Int, pricePerUnit: Double) -> Double {
-        return Double(units / 2) * pricePerUnit
+    func amountToDiscount(quantity: Int, unitPrice: Double) -> Double {
+        return Double(quantity / 2) * unitPrice
+    }
+    
+    var description: String {
+        //TODO: Localize
+        NSLocalizedString("2 for 1 discount", comment: "")
     }
 }

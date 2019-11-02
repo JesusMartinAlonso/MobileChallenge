@@ -16,10 +16,10 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
-    var productCode: String?
+    var product: Product?
     
-    var didTapAddButtonClosure: ((String) -> Void)?
-    var didTapRemoveButtonClosure: ((String) -> Void)?
+    var didTapAddButtonClosure: ((Product) -> Void)?
+    var didTapRemoveButtonClosure: ((Product) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,22 +32,25 @@ class ProductTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setProduct(_ product: Product, quantity: Int = 0){
-        productCode = product.code
-        nameLabel.text = product.name
-        priceLabel.text = "\(product.price) $"
-        quantityLabel.text = "\(quantity)"
+
+    
+    func setItem(_ item: ProductTableViewCellItem) {
+        product = item.product
+        nameLabel.text = item.product.name
+        //TODO: Refactor currency
+        priceLabel.text = "\(item.product.price) $"
+        quantityLabel.text = "\(item.quantity)"
     }
     
     @IBAction func addItem() {
-        if let productCode = productCode {
-            didTapAddButtonClosure?(productCode)
+        if let product = product {
+            didTapAddButtonClosure?(product)
         }
     }
     
     @IBAction func removeItem() {
-        if let productCode = productCode {
-            didTapRemoveButtonClosure?(productCode)
+        if let product = product {
+            didTapRemoveButtonClosure?(product)
         }
     }
 }

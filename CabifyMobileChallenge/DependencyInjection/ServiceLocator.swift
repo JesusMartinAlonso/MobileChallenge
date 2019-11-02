@@ -16,5 +16,6 @@ protocol ServiceLocator {
     
     //Use cases
     var getProductsUseCase: GetProductsUseCase {get}
+    var getDiscountUseCase: GetDiscountUseCase {get}
     
 }
