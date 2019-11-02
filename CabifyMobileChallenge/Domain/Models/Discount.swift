@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Protocol to be implement by discounts.
 protocol Discount {
 
     /// Returns the amount to discount given the quantity and the unit price of the product

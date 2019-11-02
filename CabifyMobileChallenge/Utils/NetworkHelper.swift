@@ -10,6 +10,8 @@ import Foundation
 import Reachability
 
 class NetworkHelper {
+    
+    /// True if there is Internet connectivity. False otherwise
     func isConnectedToInternet() -> Bool {
         let reachability = try! Reachability()
         return reachability.connection != .unavailable

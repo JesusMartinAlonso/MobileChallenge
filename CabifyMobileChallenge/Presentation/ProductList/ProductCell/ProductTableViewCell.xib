@@ -90,6 +90,7 @@
             <connections>
                 <outlet property="nameLabel" destination="Myu-ck-4hq" id="NJG-4i-jKy"/>
                 <outlet property="priceLabel" destination="9LI-cM-J5u" id="RNC-IW-El3"/>
+                <outlet property="priceTitleLabel" destination="Q3K-Fb-JpY" id="Mzi-Go-LM0"/>
                 <outlet property="quantityLabel" destination="mhz-6l-UJ1" id="imh-bc-D52"/>
             </connections>
             <point key="canvasLocation" x="165.625" y="140.625"/>

@@ -2,6 +2,8 @@ import Foundation
 
 
 protocol PaymentDelegate : class {
+    
+    /// Show in the view that the payment has been completed
     func paymentCompleted()
 }
 
@@ -27,6 +29,7 @@ class PaymentPresenter  {
             case .success:
                 self.delegate.paymentCompleted()
             case .failure:
+                //As the pay order use case always succeeds,.failure is not implemented
                 print("NOT SUPPORTED")
             }
         }

@@ -21,19 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        //navigationController.isNavigationBarHidden = true
-        
         let initialViewController = ProductListRouter.createProductListViewController(serviceLocator: serviceLocator)
         
         navigationController.viewControllers = [initialViewController]
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        
-        //Create initial view controller
-        
-        
-        
         
         return true
     }

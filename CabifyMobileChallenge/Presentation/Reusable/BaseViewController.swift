@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// BaseViewController that provides a convenient way to show a loading in  the whole view
 class BaseViewController: UIViewController {
 
     var loadingView: UIView!

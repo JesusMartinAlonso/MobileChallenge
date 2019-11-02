@@ -19,7 +19,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="Cabify_Store" customModuleProvider="target">
             <connections>
                 <outlet property="orderTableView" destination="Jdi-ED-Iem" id="0is-Rq-1kZ"/>
+                <outlet property="payButton" destination="yE3-5P-p81" id="o7V-5h-4RH"/>
                 <outlet property="totalAmountLabel" destination="7DN-5E-6SS" id="f5E-pB-gkf"/>
+                <outlet property="totalAmountTitleLabel" destination="IBt-JW-qnS" id="fUj-Rs-ely"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

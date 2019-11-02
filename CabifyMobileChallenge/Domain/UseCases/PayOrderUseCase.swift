@@ -9,8 +9,8 @@
 import Foundation
 
 
+/// Dummy use case that simulates a payment: It returns successfully after 4 seconds
 struct PayOrderUseCase {
-    
     func execute(result: @escaping (Result<Void,Error>) -> Void ) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
             result(.success(()))

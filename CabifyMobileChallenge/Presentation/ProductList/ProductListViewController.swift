@@ -1,41 +1,42 @@
 import UIKit
 
 
+/// View controller that represents the list of the products of the store
 class ProductListViewController: BaseViewController {
     
     var presenter : ProductListPresenter!
     
     @IBOutlet weak var productsTableView: UITableView!
     @IBOutlet weak var checkoutButton: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
     
+    /// Datasource of products
     var productsDatasource: [ProductTableViewCellItem] = []
-    var shoppingCart: [String:Int] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //TODO: Localize
-        title = "Cabify's store"
+        title = NSLocalizedString("productlist_text_title", comment: "")
+        
+        //Adds refresh products button
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
                                                             target: self, action: #selector(refreshProducts))
         productsTableView.dataSource = self
+        //Row height is calculated automatically based on intrinsic content size of each cell
         productsTableView.rowHeight = UITableView.automaticDimension
+        //Call presenter to setup view
         presenter.setup()
     }
     
-    
+    ///Method called when user taps refresh button
     @objc func refreshProducts() {
         presenter.setup()
     }
+    
+    /// Method called when user press checkout button
     @IBAction func checkoutButtonPressed() {
         presenter.checkout()
     }
-}
-
-extension ProductListViewController: UITableViewDelegate {
-    
 }
 
 extension ProductListViewController: UITableViewDataSource {
@@ -48,10 +49,13 @@ extension ProductListViewController: UITableViewDataSource {
         let product = productsDatasource[indexPath.row]
         let cell = getProductCell()
         cell.setItem(product)
+        //Closure executed when user press '+' button of the cell
+        //Adds unowned to avoid memory leaks
         cell.didTapAddButtonClosure = { [unowned self] product in
             self.presenter.addUnitToCart(ofProduct: product)
         }
-
+        //Closure executed when user press '-' button of the cell
+        //Adds unowned to avoid memory leaks
         cell.didTapRemoveButtonClosure = { [unowned self] product in
             self.presenter.substractUnitToCart(ofProduct: product)
         }
@@ -60,6 +64,7 @@ extension ProductListViewController: UITableViewDataSource {
     
     }
     
+    /// Get the reusable ProductTableViewCell or register if not registered yet.
     fileprivate func getProductCell() -> ProductTableViewCell {
         if let cell = productsTableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.CELL_IDENTIFIER) as? ProductTableViewCell {
             return cell
@@ -72,11 +77,10 @@ extension ProductListViewController: UITableViewDataSource {
     
     
 }
-
+///MARK: - ProductListDelegate
 extension ProductListViewController : ProductListDelegate {
     
-    
-    
+
     func showError(_ error: CustomError) {
         productsTableView.isHidden = true
         checkoutButton.isHidden = true
@@ -84,11 +88,9 @@ extension ProductListViewController : ProductListDelegate {
         let errorToShow: String
         switch error {
         case .NoInternetConnection:
-            //TODO: Localize
-            errorToShow = "There is no Internet connectivity."
+            errorToShow = NSLocalizedString("productlist_text_nointernet", comment: "")
         case .Unknown:
-            //TODO: Localize
-            errorToShow = "Unknown error. Try again"
+            errorToShow = NSLocalizedString("productlist_text_unknownerror", comment: "")
         }
         
         errorLabel.text = errorToShow
@@ -96,8 +98,10 @@ extension ProductListViewController : ProductListDelegate {
     }
     
     func setCheckoutButton(numberOfItems: Int, enabled: Bool) {
-        //TODO: Localize
-        checkoutButton.setTitle("Checkout (\(numberOfItems) items)", for: .normal)
+        
+        let localizedTitle = NSLocalizedString("productlist_button_checkout", comment: "")
+        checkoutButton.setTitle(String(format: localizedTitle, numberOfItems),
+                                for: .normal)
         checkoutButton.isEnabled = enabled
     }
     

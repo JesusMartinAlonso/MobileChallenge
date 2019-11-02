@@ -160,8 +160,10 @@
                 <outlet property="discountView" destination="Btp-ss-plG" id="Bj5-OE-G3u"/>
                 <outlet property="productNameLabel" destination="3SP-sp-rcL" id="z07-Qv-aB3"/>
                 <outlet property="quantityLabel" destination="XCv-gM-T9Y" id="DRP-ZZ-2wk"/>
+                <outlet property="quantityTitleLabel" destination="rZV-wQ-t54" id="g8R-V4-J9c"/>
                 <outlet property="totalPriceLabel" destination="eNt-sZ-ymO" id="nSv-3c-1g8"/>
                 <outlet property="unitPriceLabel" destination="LKJ-wc-Njk" id="UBc-Yv-cDk"/>
+                <outlet property="unitPriceTitleLabel" destination="Bp8-sm-yBB" id="TDA-R2-ylt"/>
             </connections>
             <point key="canvasLocation" x="200.00000000000003" y="63.616071428571423"/>
         </tableViewCell>

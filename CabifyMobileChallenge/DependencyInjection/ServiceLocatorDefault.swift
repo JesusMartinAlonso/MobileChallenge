@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// ServiceLocator default implementation. We use lazy vars to avoid loading all dependencies when ServiceLocator instance is created
 class ServiceLocatorDefault: ServiceLocator {
     
     

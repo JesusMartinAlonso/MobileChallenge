@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-
+/// Information shown in a ShoppingCartTableViewCell
 struct ShoppingCartItem {
     
     typealias DiscountInfo = (description: String, amount: Double)
@@ -18,5 +17,7 @@ struct ShoppingCartItem {
     let unitPrice: Double
     let quantity: Int
     let totalPrice: Double
+    
+    /// Discount if available for the product of the cell
     let discount: DiscountInfo?
 }

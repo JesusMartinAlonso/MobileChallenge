@@ -19,6 +19,9 @@ class ShoppingCartPresenter  {
     weak var delegate : ShoppingCartDelegate!
     var router : ShoppingCartRouter
     
+    //Shopping cart modeled as a dictionary:
+    //Key -> Product
+    //Value -> Quantity
     let shoppingCart: [Product:Int]
     
     let getDiscountUseCase: GetDiscountUseCase
@@ -33,6 +36,7 @@ class ShoppingCartPresenter  {
         self.getDiscountUseCase = getDiscountUseCase
     }
     
+    /// Calculate the subtotal and total amounts of the order applying the available discounts
     func setup() {
         
         delegate.isLoading(true)
@@ -42,13 +46,14 @@ class ShoppingCartPresenter  {
             return keyValue.key.code
         }
         
+        //Get discounts for the products in the shopping cart. In this way, we avoid to retrieve all the discounts of all products
         getDiscountUseCase.execute(productCodes: arrayOfProductsCode) { (result) in
             self.delegate.isLoading(false)
             switch result {
             case .success(let discounts):
-                print("We have discounts")
                 self.calculateTotal(withDiscounts: discounts)
-            case .failure(let error):
+            case .failure(_):
+                //For this MVP version, I haven't implemented error management because getDiscountUseCase always succeed.
                 print("NO IMPLEMENTED")
             }
         }
@@ -59,6 +64,8 @@ class ShoppingCartPresenter  {
     }
     
     
+    /// Calculate total amount to pay
+    /// - Parameter discounts: Discounts to apply
     fileprivate func calculateTotal(withDiscounts discounts: [String:Discount]) {
         
         var totalAmount = 0.0
@@ -66,13 +73,14 @@ class ShoppingCartPresenter  {
 
             let (product, quantity) = keyValue
             
-            //Discount
+            //Calculate discount
             let discountInfo: ShoppingCartItem.DiscountInfo?
             if let discount = discounts[product.code] {
                 let amountToDiscount = discount.amountToDiscount(quantity: quantity,
                                                                  unitPrice: product.price)
                            
-                discountInfo = ShoppingCartItem.DiscountInfo(discount.description,amountToDiscount)
+                discountInfo = ShoppingCartItem.DiscountInfo(discount.description,
+                                                             amountToDiscount)
             } else {
                 discountInfo = nil
             }
@@ -81,12 +89,13 @@ class ShoppingCartPresenter  {
             totalAmount += itemSubTotal - (discountInfo?.amount ?? 0.0)
             
             return ShoppingCartItem(productName: product.name,
-                                                                 unitPrice: product.price,
-                                                                 quantity: quantity,
-                                                                 totalPrice: itemSubTotal,
-                                                                 discount: discountInfo)
+                                    unitPrice: product.price,
+                                    quantity: quantity,
+                                    totalPrice: itemSubTotal,
+                                    discount: discountInfo)
         }
         
+        //Update view
         delegate.update(shoppingCart: shoppingCartCells, totalAmount: totalAmount)
         
     }

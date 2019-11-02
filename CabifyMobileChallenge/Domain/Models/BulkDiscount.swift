@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Bulk discount: [discountPerUnit] discount for each unit buying [minimumQuantity] or more items
 struct BulkDiscount: Discount {
     
+    /// Minimun quantity to apply the discount
     let minimumQuantity: Int
     
     let discountPerUnit: Double
@@ -19,9 +21,12 @@ struct BulkDiscount: Discount {
     }
     
     var description: String {
-        //TODO: Localize
-        //TODO: Currency
-        NSLocalizedString("Bulk discount: \(discountPerUnit)\(CurrencyHelper.currency) discount buying \(minimumQuantity) or more", comment: "")
+        let localizedString = NSLocalizedString("bulkdiscount_text_description", comment: "")
+        return String(format: localizedString,
+                      discountPerUnit,
+                      CurrencyHelper.currency,
+                      minimumQuantity
+        )
     }
     
     

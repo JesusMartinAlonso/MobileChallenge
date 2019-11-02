@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Protocol to implement by ServiceLocator objects that provides all the dependencies for the app
 protocol ServiceLocator {
     
     //Repository

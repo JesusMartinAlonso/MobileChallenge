@@ -6,15 +6,21 @@ class ShoppingCartViewController: BaseViewController {
     var presenter : ShoppingCartPresenter!
     
     @IBOutlet weak var orderTableView: UITableView!
+    @IBOutlet weak var totalAmountTitleLabel: UILabel!
     @IBOutlet weak var totalAmountLabel: UILabel!
+    @IBOutlet weak var payButton: UIButton!
     
+    /// Shopping cart items datasource
     var shoppingCartDatasource: [ShoppingCartItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        title = "Shopping Cart"
+        title = NSLocalizedString("shoppingcart_text_title", comment: "")
+        totalAmountTitleLabel.text = NSLocalizedString("shoppingcart_text_totalamount", comment: "")
+        payButton.setTitle(NSLocalizedString("shoppingcart_button_pay", comment: ""), for: .normal)
         orderTableView.dataSource = self
+        //Set up data
         presenter.setup()
     }
     
@@ -34,9 +40,6 @@ extension ShoppingCartViewController : ShoppingCartDelegate {
         shoppingCartDatasource = shoppingCart
         orderTableView.reloadData()
     }
-    
-
-
 }
 
 extension ShoppingCartViewController: UITableViewDataSource {

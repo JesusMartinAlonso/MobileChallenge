@@ -12,7 +12,7 @@ class ShoppingCartRouter {
         self.serviceLocator = serviceLocator
     }
     
-    
+    /// Assemble ShoppingCart module
     static func createShoppingCartViewController(withShoppingCart shoppingCart: [Product:Int],
                                                  serviceLocator : ServiceLocator) -> ShoppingCartViewController {
         
@@ -27,6 +27,7 @@ class ShoppingCartRouter {
         
     }
     
+    /// Navigate to payment view controller
     func navigateToPayment() {
         let paymentViewController = PaymentRouter.createPaymentViewController(serviceLocator: serviceLocator)
         

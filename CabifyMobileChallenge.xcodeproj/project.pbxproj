@@ -32,6 +32,7 @@
 		2D0FAD78236D97FE00C42EB6 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0FAD74236D97FE00C42EB6 /* PaymentViewController.xib */; };
 		2D0FAD7A236D983800C42EB6 /* PayOrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD79236D983800C42EB6 /* PayOrderUseCase.swift */; };
 		2D0FAD7C236DAF0E00C42EB6 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FAD7B236DAF0E00C42EB6 /* CurrencyFormatter.swift */; };
+		2D0FAD7F236DB3FB00C42EB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D0FAD7D236DB3FB00C42EB6 /* Localizable.strings */; };
 		2D64AD582364541F00523A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64AD572364541F00523A63 /* AppDelegate.swift */; };
 		2D64AD612364542200523A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D64AD602364542200523A63 /* Assets.xcassets */; };
 		2D64AD642364542200523A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D64AD622364542200523A63 /* LaunchScreen.storyboard */; };
@@ -96,6 +97,7 @@
 		2D0FAD74236D97FE00C42EB6 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		2D0FAD79236D983800C42EB6 /* PayOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrderUseCase.swift; sourceTree = "<group>"; };
 		2D0FAD7B236DAF0E00C42EB6 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		2D0FAD7E236DB3FB00C42EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D64AD542364541F00523A63 /* Cabify Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cabify Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D64AD572364541F00523A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D64AD602364542200523A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				2D64AD602364542200523A63 /* Assets.xcassets */,
 				2D64AD622364542200523A63 /* LaunchScreen.storyboard */,
 				2D64AD652364542200523A63 /* Info.plist */,
+				2D0FAD7D236DB3FB00C42EB6 /* Localizable.strings */,
 			);
 			path = CabifyMobileChallenge;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D64AD642364542200523A63 /* LaunchScreen.storyboard in Resources */,
+				2D0FAD7F236DB3FB00C42EB6 /* Localizable.strings in Resources */,
 				2DDB71512364A7F00089F219 /* Product Sans Regular.ttf in Resources */,
 				2DDB71452364A53E0089F219 /* ProductTableViewCell.xib in Resources */,
 				2D0FAD662367760600C42EB6 /* ShoppingCartTableViewCell.xib in Resources */,
@@ -652,6 +656,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2D0FAD7D236DB3FB00C42EB6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D0FAD7E236DB3FB00C42EB6 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2D64AD622364542200523A63 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

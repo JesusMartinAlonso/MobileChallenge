@@ -8,7 +8,10 @@
 
 import Foundation
 
+/// Information shown in a ProductTableViewCell
 struct ProductTableViewCellItem {
+    /// Product
     let product: Product
+    /// Number of items of this product
     let quantity: Int
 }

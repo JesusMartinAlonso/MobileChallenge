@@ -12,7 +12,7 @@ class PaymentRouter {
         self.serviceLocator = serviceLocator
     }
     
-    
+    ///Assembles PaymentViewController
     static func createPaymentViewController(serviceLocator : ServiceLocator) -> PaymentViewController {
         
         let viewController = PaymentViewController()
@@ -26,6 +26,7 @@ class PaymentRouter {
     }
     
     
+    /// Navigates to ProductList screen
     func popToRootViewController() {
         
         let initialViewController = ProductListRouter.createProductListViewController(serviceLocator: serviceLocator)

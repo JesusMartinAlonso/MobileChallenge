@@ -13,6 +13,8 @@ class ProductListRouter {
     }
     
     
+    /// Assemble ProductListViewController
+    /// - Parameter serviceLocator: ServiceLocator instance that provides dependencies
     static func createProductListViewController(serviceLocator : ServiceLocator) -> ProductListViewController {
         
         let viewController = ProductListViewController()
@@ -25,6 +27,8 @@ class ProductListRouter {
         
     }
     
+    /// Navigate to ShoppingCart screen with the shopping cart passed by parameter
+    /// - Parameter shoppingCart: ShoppingCart dictionary
     func navigateToShoppingCart(_ shoppingCart: [Product: Int]){
         
         let shoppingCart = ShoppingCartRouter.createShoppingCartViewController(withShoppingCart: shoppingCart,

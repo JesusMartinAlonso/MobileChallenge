@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  CabifyMobileChallenge
+
+  Created by Jesus Martin Alonso on 02/11/2019.
+  Copyright © 2019 Jesus Martin Alonso. All rights reserved.
+*/
+
+"productlist_text_title" = "Cabify Store";
+"productlist_text_nointernet" = "There is no Internet connectivity.";
+"productlist_text_unknownerror" = "Unknown error. Try again";
+"productlist_button_checkout" = "Checkout (%i items)";
+"productcell_text_price" = "Price:";
+"shoppingcartcell_text_unitprice" = "Unit price:";
+"shoppingcartcell_text_quantity" = "Quantity:";
+"shoppingcart_text_title" = "Shopping Cart";
+"shoppingcart_text_totalamount" = "Total";
+"shoppingcart_button_pay" = "Pay!";
+"payment_text_paymentinprogress" = "Paying order...";
+"payment_text_paymentcompleted" = "Payment completed successfully!";
+"payment_button_returntostore" = "Return to store";
+"bulkdiscount_text_description" = "Bulk discount: %.2f%@ discount for each unit buying %i or more";
+"twoforonediscount_text_description" = "2 for 1 discount";

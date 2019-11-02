@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Custom errors managed in the app
 enum CustomError: Error {
     case NoInternetConnection
     case Unknown

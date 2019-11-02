@@ -10,6 +10,8 @@ import Foundation
 
 protocol RemoteDataSource {
     
+    /// Get the product list of the store
+    /// - Parameter result: Result of the query. If succeeds the result will contain an array of products. Otherwise a CustomError is returned
     func getProducts(result: @escaping (Result<[Product],CustomError>) -> Void)
     
 }
