@@ -8,11 +8,6 @@ target 'CabifyMobileChallenge' do
   # Pods for CabifyMobileChallenge
   # Dependency used to be able to check Internet connectivity
   pod 'ReachabilitySwift'
-
-  target 'CabifyMobileChallengeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
   
   target 'CabifyMobileChallengeUITests' do
     inherit! :search_paths
