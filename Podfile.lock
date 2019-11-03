@@ -1,16 +1,28 @@
 PODS:
+  - Cuckoo (1.2.0):
+    - Cuckoo/Swift (= 1.2.0)
+  - Cuckoo/Swift (1.2.0)
+  - KIF (3.7.8):
+    - KIF/Core (= 3.7.8)
+  - KIF/Core (3.7.8)
   - ReachabilitySwift (5.0.0)
 
 DEPENDENCIES:
+  - Cuckoo
+  - KIF
   - ReachabilitySwift
 
 SPEC REPOS:
   trunk:
+    - Cuckoo
+    - KIF
     - ReachabilitySwift
 
 SPEC CHECKSUMS:
+  Cuckoo: f5f4e7c308c512cc2dedbdce23f5dc6985cb5173
+  KIF: 52e1af1a78cf6fe4ec6777b14776f3dd2eccc32e
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
 
-PODFILE CHECKSUM: 69feab495b0a34c52ed4451952ca704adccc71b0
+PODFILE CHECKSUM: b4831668d72e52d9a534598d69bfdcf786f6bcd2
 
 COCOAPODS: 1.8.3

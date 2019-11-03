@@ -13,5 +13,12 @@ target 'CabifyMobileChallenge' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  target 'CabifyMobileChallengeUITests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'KIF'
+    pod 'Cuckoo'
+  end
 
 end
